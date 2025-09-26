@@ -155,8 +155,8 @@ generateProfilePicture
 
 //END
 
-const Owner = JSON.parse(fs.readFileSync('./Access/Own.json'))
-const Premium = JSON.parse(fs.readFileSync('./Access/Prem.json'))
+const Owner = JSON.parse(fs.readFileSync('./System/Own.json'))
+const Premium = JSON.parse(fs.readFileSync('./System/Prem.json'))
 const CMD = body.startsWith(prefix)
 const command = body.startsWith(prefix) ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase(): ''
 const args = body.trim().split(/ +/).slice(1)
@@ -352,8 +352,8 @@ if (!CreatorOnly) return ReplyRil("*Your Not RilzX7*")
   if (loadnum.length == 0) return ReplyRil(`Number Invalid!!!`);
   owner.push(numero);
   Premium.push(numero);
-  fs.writeFileSync('./Access/Own.json', JSON.stringify(owner));
-  fs.writeFileSync('./Access/Prem.json', JSON.stringify(Premium));
+  fs.writeFileSync('./System/Own.json', JSON.stringify(owner));
+  fs.writeFileSync('./System/Prem.json', JSON.stringify(Premium));
   ReplyRil(`Number ${numero} succes add to database!`);
   break;
 
@@ -365,8 +365,8 @@ if (!CreatorOnly) return ReplyRil("*Your Not RilzX7*")
   numload = Premium.indexOf(Xnomor);
   Owner.splice(NomorX, 1);
   Premium.splice(numload, 1);
-  fs.writeFileSync('./Access/Own.json', JSON.stringify(Owner));
-  fs.writeFileSync('./Access/Prem.json', JSON.stringify(Premium));
+  fs.writeFileSync('./System/Own.json', JSON.stringify(Owner));
+  fs.writeFileSync('./System/Prem.json', JSON.stringify(Premium));
   ReplyRil(`Number ${Xnomor} succes delete to database!`);
   break;
 
@@ -377,7 +377,7 @@ if (!CreatorOnly) return ReplyRil("*Your Not RilzX7*")
   let Invalid = await Ril.onWhatsApp(numero + `@s.whatsapp.net`);
   if (Invalid.length == 0) return ReplyRil(`Number Invalid!!!`);
   Premium.push(numero);
-  fs.writeFileSync('./Access/Prem.json', JSON.stringify(Premium));
+  fs.writeFileSync('./System/Prem.json', JSON.stringify(Premium));
   ReplyRil(`Number ${numero} succes add to database!`);
   break;
 
@@ -387,7 +387,7 @@ if (!CreatorOnly) return ReplyRil("*Your Not RilzX7*")
   Xnomor = qtext.split("|")[0].replace(/[^0-9]/g, '');
   NomorX = Premium.indexOf(Xnomor);
   Premium.splice(NomorX, 1);
-  fs.writeFileSync('./Access/Prem.json', JSON.stringify(Premium));
+  fs.writeFileSync('./System/Prem.json', JSON.stringify(Premium));
   ReplyRil(`Number ${Xnomor} succes delate to database!`);
   break;
 
