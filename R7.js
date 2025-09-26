@@ -1,5 +1,12 @@
 /*
-© 𝐓𝐡𝐞𝐑𝐢𝐥𝐲𝐳𝐲𝐈𝐬𝐇𝐞𝐫𝐞 ϟ
+Copyright RilzX7 
+© 2025 ( RX7 )
+Tele : t.me/Rilyzyishere
+
+
+don't delete Credits!
+
+Copyright #RilzX7 ( 2025 )
 */
 console.clear();
 
