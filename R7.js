@@ -308,7 +308,7 @@ await Ril.sendMessage(m.chat, {
   productMessage: {
     title: "#-2025 ( RilzX7 )",
     description: "X",
-    thumbnail: { url: "https://rismajaya.my.id/result/LutBotz-c34154235fce.jpg" },
+    thumbnail: { url: "https://img1.pixhost.to/images/7640/627635809_biyu-offc.jpg" },
     productId: "123456789",
     retailerId: "TOKOKU",
     body: all,
